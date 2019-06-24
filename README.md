@@ -208,13 +208,13 @@ raygansms.GetCredit() { (result) **in**
 از این متد برای واکشی تعرفه ارسال پیامک توسط کاربر استفاده می شود.
 
 نمونه کد فراخوانی:
-
+```
 raygansms.GetPrices() { (result) **in**
 
 // Your Code
 
 }
-
+```
 بررسی شماره ها در لیست سیاه ( **متد**  **ShowWhiteList** )
 
 خروجی متد زیر لیست شماره موبایل هایی است که در لیست سیاه قرار ندارند.
@@ -224,13 +224,13 @@ raygansms.GetPrices() { (result) **in**
 | Mobiles | [String] | لیستی از شماره موبایل ها برای بررسی |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.ShowWhiteList(Mobiles: Mobiles) { (result) **in**
 
 // Your Code
 
 }
-
+```
 تفسیر کد های خروجی
 
 | نوع ResultCode | کد خطا | توضیح خطا |
