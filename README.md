@@ -20,6 +20,7 @@
 | Message | String | متن نتیجه عملیات |
 | Result | Any | اطلاعات دیگر عملیات درخواستی |
 
+```
 در کد زیر نمونه کدی برای دریافت اعتبار حساب استفاده شده است.
 
 **private**** let** raygansms: Raygansms = Raygansms(username: &quot;user&quot;, password: &quot;pass&quot;);
@@ -37,6 +38,7 @@
 **private**** let** PORT: Int = 90;
 
 **private**** let** Hello: String = &quot;سلام&quot;;
+```
 
  دقت کنید برای اجرا شما باید از کلاس Raygansms یک متغیر ایجاد کرده و متد مربوط به اجرا را در کد فرابخوانید. برای نمونه می‌توانید کد زیر را مشاهده کنید. در این کد اعتبار باقیمانده را دریافت می‌کند و آنرا چاپ می کند.
 
