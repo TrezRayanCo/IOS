@@ -1,0 +1,11 @@
+framework module Raygansms {
+  umbrella header "Raygansms.h"
+
+  export *
+  module * { export * }
+}
+
+module Raygansms.Swift {
+    header "Raygansms-Swift.h"
+    requires objc
+}
