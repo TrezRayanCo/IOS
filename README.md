@@ -41,7 +41,7 @@
 ```
 
  دقت کنید برای اجرا شما باید از کلاس Raygansms یک متغیر ایجاد کرده و متد مربوط به اجرا را در کد فرابخوانید. برای نمونه می‌توانید کد زیر را مشاهده کنید. در این کد اعتبار باقیمانده را دریافت می‌کند و آنرا چاپ می کند.
-
+```
 raygansms.GetCredit()  {  (result) **in**
 
 **        var** text: String = &quot;Code:\t\(String(describing: result?.Code))\nMessage:\t\(String(describing: result?.Message))&quot;
@@ -55,7 +55,7 @@ raygansms.GetCredit()  {  (result) **in**
                 print(&quot;text:\(text)&quot;)
 
  };
-
+```
 در ادامه متدهای کتابخانه را شرح می دهیم.
 
 ارسال پیام
