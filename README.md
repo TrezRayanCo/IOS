@@ -73,13 +73,13 @@ raygansms.GetCredit()  {  (result) **in**
 | SendDateInTimeStamp | CLongLong | تاریخ ارسال پیام به صورتTimeStamp  (به ثانیه) |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles, userGroupID: UserGroupID, SendDateInTimeStamp: CLongLong(Date().timeIntervalSince1970)) { (result) **in**
 
 // Your Code
 
 }
-
+```
 **ملاحضات:**
 
 در صورتی که تاریخ ارسال، از تاریخ فعلی کمتر باشد یا به عبارتی دیگر از زمان مورد نظر عبور کرده باشید، پیام مورد نظر در لحظه ارسال خواهد شد.
@@ -95,13 +95,13 @@ raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles
 | UserGroupID | String | گروه پیام |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: recipientsMessages, userGroupID: UserGroupID) { (result) **in**
 
 // Your Code
 
 }
-
+```
 
 
 ارسال پیام به پورت خاص ( **متد**  **SendMessageToPort** )
@@ -117,13 +117,13 @@ raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: 
 | recipientsMessage | [RecipientsMessage] | آرایه ای از شماره ها و پیام های متناظر |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.SendMessageToPort(phoneNumber: PhoneNumber, recievePortNumber: PORT, sendPortNumber: PORT, userGroupID: UserGroupID, recipientsMessage: recipientsMessages) { (result) **in**
 
 // Your Code
 
 }
-
+```
 مشاهده وضعیت ارسال پیام گروهی ( **متد**  **GroupMessageStatus** )
 
 از این متد برای واکشی، وضعیت لیست پیام های ارسالی استفاده می شود.
@@ -133,13 +133,13 @@ raygansms.SendMessageToPort(phoneNumber: PhoneNumber, recievePortNumber: PORT, s
 | groupMessageId | String | شناسه گروه ارسال پیام |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.GroupMessageStatus(userGroupID: UserGroupID) { (result) **in**
 
 // Your Code
 
 }
-
+```
 مشاهده وضعیت ارسال پیام متناظر ( **متد**  **CorrespondingMessageStatus** )
 
 از این متد برای واکشی ، وضعیت لیست پیام های ارسالی استفاده می شود.
@@ -149,13 +149,13 @@ raygansms.GroupMessageStatus(userGroupID: UserGroupID) { (result) **in**
 | messageId | [String] | شناسه گروه ارسال پیام |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.CorrespondingMessageStatus( messageId:MessageIDs) { (result) **in**
 
 // Your Code
 
 }
-
+```
 دریافت شناسه گروه پیام ( **متد**  **GetGroupMessageId** )
 
 از این متد برای دریافت ، شناسه گروه پیام ارسالی استفاده می شود.
@@ -165,13 +165,13 @@ raygansms.CorrespondingMessageStatus( messageId:MessageIDs) { (result) **in**
 | groupId | String | شناسه ارسال پیام کاربر |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) **in**
 
 // Your Code
 
 }
-
+```
 پیام های دریافتی ( **متد**  **ReceiveMessages** )
 
 از این متد برای واکشی ، لیست پیام های در یافتی استفاده می شود.
@@ -184,25 +184,25 @@ raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) **in**
 | page | Int | شماره صفحه |
 
 نمونه کد فراخوانی:
-
+```
 raygansms.ReceiveMessages(phoneNumber: PhoneNumber, startDate: CLongLong(Date().timeIntervalSince1970), EndDate: CLongLong(Date().timeIntervalSince1970), page: 1) { (result) **in**
 
 // Your Code
 
 }
-
+```
 دریافت اعتبار ( **متد**  **GetCredit** )
 
 از این متد برای واکشی ، اعتبار کاربر استفاده می شود.
 
 نمونه کد فراخوانی:
-
+```
 raygansms.GetCredit() { (result) **in**
 
 // Your Code
 
 }
-
+```
 قیمت پیامک ( **متد**  **GetPrices** )
 
 از این متد برای واکشی تعرفه ارسال پیامک توسط کاربر استفاده می شود.
