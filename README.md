@@ -22,9 +22,10 @@
 | Message | String | متن نتیجه عملیات |
 | Result | Any | اطلاعات دیگر عملیات درخواستی |
 
-```
+
 در کد زیر نمونه کدی برای دریافت اعتبار حساب استفاده شده است.
 
+```
 **private**** let** raygansms: Raygansms = Raygansms(username: &quot;user&quot;, password: &quot;pass&quot;);
 
 **private**** let** Mobiles: [String] = [&quot;09120000000&quot;, &quot;09120000001&quot;];
@@ -42,7 +43,10 @@
 **private**** let** Hello: String = &quot;سلام&quot;;
 ```
 
+<div dir="rtl" >
  دقت کنید برای اجرا شما باید از کلاس Raygansms یک متغیر ایجاد کرده و متد مربوط به اجرا را در کد فرابخوانید. برای نمونه می‌توانید کد زیر را مشاهده کنید. در این کد اعتبار باقیمانده را دریافت می‌کند و آنرا چاپ می کند.
+ </div>
+ 
 ```
 raygansms.GetCredit()  {  (result) **in**
 
@@ -58,6 +62,8 @@ raygansms.GetCredit()  {  (result) **in**
 
  };
 ```
+
+<div dir="rtl" >
 در ادامه متدهای کتابخانه را شرح می دهیم.
 
 ارسال پیام
@@ -65,6 +71,8 @@ raygansms.GetCredit()  {  (result) **in**
 ارسال پیام گروهی ( **متد**  **SendMessage** )
 
 از این متد برای ارسال پیام گروهی استفاده می شود. بدیهی است از این پیام برای ارسال پیام تکی نیز میتوان استفاده نمود.
+</div>
+
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
@@ -74,7 +82,10 @@ raygansms.GetCredit()  {  (result) **in**
 | UserGroupID | String | گروه پیام |
 | SendDateInTimeStamp | CLongLong | تاریخ ارسال پیام به صورتTimeStamp  (به ثانیه) |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+ </div>
+ 
 ```
 raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles, userGroupID: UserGroupID, SendDateInTimeStamp: CLongLong(Date().timeIntervalSince1970)) { (result) **in**
 
@@ -82,6 +93,8 @@ raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles
 
 }
 ```
+
+<div dir="rtl" >
 **ملاحضات:**
 
 در صورتی که تاریخ ارسال، از تاریخ فعلی کمتر باشد یا به عبارتی دیگر از زمان مورد نظر عبور کرده باشید، پیام مورد نظر در لحظه ارسال خواهد شد.
@@ -89,6 +102,7 @@ raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles
 ارسال پیام متناظر ( **متد**  **SendCorrespondingMessage** )
 
 از این متد برای ارسال پیام متناظر استفاده می شود.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
@@ -96,7 +110,10 @@ raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles
 | recipientsMessage | [RecipientsMessage] | آرایه ای از شماره ها و پیام های متناظر |
 | UserGroupID | String | گروه پیام |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+ </div>
+ 
 ```
 raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: recipientsMessages, userGroupID: UserGroupID) { (result) **in**
 
@@ -105,7 +122,7 @@ raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: 
 }
 ```
 
-
+<div dir="rtl" >
 ارسال پیام به پورت خاص ( **متد**  **SendMessageToPort** )
 
 از این متد برای ارسال پیام به پورت خاص استفاده می شود.
@@ -117,8 +134,12 @@ raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: 
 | sendPortNumber | Int | شماره پورت دریافت پیام |
 | UserGroupID | String | گروه پیام |
 | recipientsMessage | [RecipientsMessage] | آرایه ای از شماره ها و پیام های متناظر |
+</div>
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+ </div>
+ 
 ```
 raygansms.SendMessageToPort(phoneNumber: PhoneNumber, recievePortNumber: PORT, sendPortNumber: PORT, userGroupID: UserGroupID, recipientsMessage: recipientsMessages) { (result) **in**
 
@@ -126,6 +147,8 @@ raygansms.SendMessageToPort(phoneNumber: PhoneNumber, recievePortNumber: PORT, s
 
 }
 ```
+
+<div dir="rtl" >
 مشاهده وضعیت ارسال پیام گروهی ( **متد**  **GroupMessageStatus** )
 
 از این متد برای واکشی، وضعیت لیست پیام های ارسالی استفاده می شود.
@@ -133,8 +156,12 @@ raygansms.SendMessageToPort(phoneNumber: PhoneNumber, recievePortNumber: PORT, s
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
 | groupMessageId | String | شناسه گروه ارسال پیام |
+</div>
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+</div>
+ 
 ```
 raygansms.GroupMessageStatus(userGroupID: UserGroupID) { (result) **in**
 
