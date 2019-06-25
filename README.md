@@ -22,8 +22,9 @@
 | Message | String | متن نتیجه عملیات |
 | Result | Any | اطلاعات دیگر عملیات درخواستی |
 
-
+<div dir="rtl" >
 در کد زیر نمونه کدی برای دریافت اعتبار حساب استفاده شده است.
+</div>
 
 ```
 **private**** let** raygansms: Raygansms = Raygansms(username: &quot;user&quot;, password: &quot;pass&quot;);
