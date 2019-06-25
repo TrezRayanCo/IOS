@@ -169,15 +169,21 @@ raygansms.GroupMessageStatus(userGroupID: UserGroupID) { (result) **in**
 
 }
 ```
+
+<div dir="rtl" >
 مشاهده وضعیت ارسال پیام متناظر ( **متد**  **CorrespondingMessageStatus** )
 
 از این متد برای واکشی ، وضعیت لیست پیام های ارسالی استفاده می شود.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
 | messageId | [String] | شناسه گروه ارسال پیام |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+</div>
+
 ```
 raygansms.CorrespondingMessageStatus( messageId:MessageIDs) { (result) **in**
 
@@ -185,15 +191,20 @@ raygansms.CorrespondingMessageStatus( messageId:MessageIDs) { (result) **in**
 
 }
 ```
+<div dir="rtl" >
 دریافت شناسه گروه پیام ( **متد**  **GetGroupMessageId** )
 
 از این متد برای دریافت ، شناسه گروه پیام ارسالی استفاده می شود.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
 | groupId | String | شناسه ارسال پیام کاربر |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+ </div>
+ 
 ```
 raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) **in**
 
@@ -201,9 +212,12 @@ raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) **in**
 
 }
 ```
+
+<div dir="rtl" >
 پیام های دریافتی ( **متد**  **ReceiveMessages** )
 
 از این متد برای واکشی ، لیست پیام های در یافتی استفاده می شود.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
@@ -212,7 +226,10 @@ raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) **in**
 | EndDate | CLongLong | تاریخ پایان به صورت TimeStamp |
 | page | Int | شماره صفحه |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+ </div>
+ 
 ```
 raygansms.ReceiveMessages(phoneNumber: PhoneNumber, startDate: CLongLong(Date().timeIntervalSince1970), EndDate: CLongLong(Date().timeIntervalSince1970), page: 1) { (result) **in**
 
@@ -220,11 +237,15 @@ raygansms.ReceiveMessages(phoneNumber: PhoneNumber, startDate: CLongLong(Date().
 
 }
 ```
+
+<div dir="rtl" >
 دریافت اعتبار ( **متد**  **GetCredit** )
 
 از این متد برای واکشی ، اعتبار کاربر استفاده می شود.
 
 نمونه کد فراخوانی:
+</div>
+
 ```
 raygansms.GetCredit() { (result) **in**
 
@@ -232,11 +253,14 @@ raygansms.GetCredit() { (result) **in**
 
 }
 ```
+<div dir="rtl" >
 قیمت پیامک ( **متد**  **GetPrices** )
 
 از این متد برای واکشی تعرفه ارسال پیامک توسط کاربر استفاده می شود.
 
 نمونه کد فراخوانی:
+</div>
+
 ```
 raygansms.GetPrices() { (result) **in**
 
@@ -244,15 +268,21 @@ raygansms.GetPrices() { (result) **in**
 
 }
 ```
+
+<div dir="rtl" >
 بررسی شماره ها در لیست سیاه ( **متد**  **ShowWhiteList** )
 
 خروجی متد زیر لیست شماره موبایل هایی است که در لیست سیاه قرار ندارند.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
 | Mobiles | [String] | لیستی از شماره موبایل ها برای بررسی |
 
-نمونه کد فراخوانی:
+<div dir="rtl" >
+ نمونه کد فراخوانی:
+ </div>
+ 
 ```
 raygansms.ShowWhiteList(Mobiles: Mobiles) { (result) **in**
 
@@ -260,7 +290,9 @@ raygansms.ShowWhiteList(Mobiles: Mobiles) { (result) **in**
 
 }
 ```
+<div dir="rtl" >
 تفسیر کد های خروجی
+</div>
 
 | نوع ResultCode | کد خطا | توضیح خطا |
 | --- | --- | --- |
@@ -287,8 +319,10 @@ raygansms.ShowWhiteList(Mobiles: Mobiles) { (result) **in**
 | ReceiveError | 5003 | در هنگام دریافت نتیجه ارسال پیام خطایی رخ داده است |
 | ParamSendError | 5004 | برخی پیام ها در هنگام ارسال با خطا مواجه شده اند |
 
+<div dir="rtl" >
 1. ارسال پیامک آنی و سریع (وب سرویس احراز هویت پیامکی)
 ارسال خودکار کد فعال سازی بابت احراز هویت(متد AutoSendCode)
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
