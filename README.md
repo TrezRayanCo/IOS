@@ -102,7 +102,7 @@ raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles
 نمونه کد فراخوانی:
  </div>
  
-```
+```xml
 raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: recipientsMessages, userGroupID: UserGroupID) { (result) in
 // Your Code
 }
@@ -127,7 +127,7 @@ raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: 
 نمونه کد فراخوانی:
  </div>
  
-```
+```xml
 raygansms.SendMessageToPort(phoneNumber: PhoneNumber, recievePortNumber: PORT, sendPortNumber: PORT, userGroupID: UserGroupID, recipientsMessage: recipientsMessages) { (result) in
 // Your Code
 }
@@ -149,7 +149,7 @@ raygansms.SendMessageToPort(phoneNumber: PhoneNumber, recievePortNumber: PORT, s
 نمونه کد فراخوانی:
 </div>
  
-```
+```xml
 raygansms.CorrespondingMessageStatus( messageId: MessageIDs) { (result) in
 // Your Code
 ```
@@ -169,7 +169,7 @@ raygansms.CorrespondingMessageStatus( messageId: MessageIDs) { (result) in
 نمونه کد فراخوانی:
 </div>
 
-```
+```xml
 raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) in
 // Your Code
 }
@@ -190,7 +190,7 @@ raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) in
 نمونه کد فراخوانی:
  </div>
 
-```
+```xml
 raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) **in**
 
 // Your Code
@@ -216,7 +216,7 @@ raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) **in**
 نمونه کد فراخوانی:
  </div>
  
-```
+```xml
 raygansms.ReceiveMessages(phoneNumber: PhoneNumber, startDate: CLongLong(Date().timeIntervalSince1970), EndDate: CLongLong(Date().timeIntervalSince1970), page: 1) { (result) in
 // Your Code
 }
@@ -232,8 +232,8 @@ raygansms.ReceiveMessages(phoneNumber: PhoneNumber, startDate: CLongLong(Date().
 نمونه کد فراخوانی:
 </div>
 
-```
-raygansms.GetCredit() { (result) **in**
+```xml
+raygansms.GetCredit() { (result) in
 
 // Your Code
 
@@ -248,7 +248,7 @@ raygansms.GetCredit() { (result) **in**
 نمونه کد فراخوانی:
 </div>
 
-```
+```xml
 raygansms.GetPrices() { (result) in
 // Your Code
 }
@@ -270,7 +270,7 @@ raygansms.GetPrices() { (result) in
  نمونه کد فراخوانی:
  </div>
  
-```
+```xml
 raygansms.ShowWhiteList(Mobiles: Mobiles) { (result) in
 // Your Code
 }
