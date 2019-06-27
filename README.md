@@ -41,7 +41,7 @@ private let Hello: String = "سلام";
  دقت کنید برای اجرا شما باید از کلاس Raygansms یک متغیر ایجاد کرده و متد مربوط به اجرا را در کد فرابخوانید. برای نمونه می‌توانید کد زیر را مشاهده کنید. در این کد اعتبار باقیمانده را دریافت می‌کند و آنرا چاپ می کند.
  </div>
  
-```
+```java
 raygansms.GetCredit()  {  (result) in
 	var text: String = "Code:\t\(String(describing: result?.Code))\nMessage:\t\(String(describing: result?.Message))"
 	if(result?.Result != nil){
@@ -75,7 +75,7 @@ raygansms.GetCredit()  {  (result) in
 نمونه کد فراخوانی:
  </div>
  
-```
+```java
 raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles, userGroupID: UserGroupID, SendDateInTimeStamp: CLongLong(Date().timeIntervalSince1970)) { (result) in
 // Your Code
 }
