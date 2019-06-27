@@ -26,22 +26,15 @@
 در کد زیر نمونه کدی برای دریافت اعتبار حساب استفاده شده است.
 </div>
 
-```
-**private**** let** raygansms: Raygansms = Raygansms(username: &quot;user&quot;, password: &quot;pass&quot;);
-
-**private**** let** Mobiles: [String] = [&quot;09120000000&quot;, &quot;09120000001&quot;];
-
-**private**** var** recipientsMessages: [RecipientsMessage] = [];
-
-**private**** let** MessageIDs: [String] = [&quot;1&quot;, &quot;2&quot;];
-
-**private**** let** PhoneNumber: String = &quot;5000000000&quot;;
-
-**private**** let** UserGroupID: String = &quot;1&quot;;
-
-**private**** let** PORT: Int = 90;
-
-**private**** let** Hello: String = &quot;سلام&quot;;
+```java
+private let raygansms: Raygansms = Raygansms(username: "user", password: "pass");
+private let Mobiles: [String] = [ "09120000000", "09120000001" ];
+private var recipientsMessages: [RecipientsMessage] = []; 
+private let MessageIDs: [String] = [ "1", "2" ];
+private let PhoneNumber: String = "5000000000";
+private let UserGroupID: String = "1";
+private let PORT: Int = 90;
+private let Hello: String = "سلام";
 ```
 
 <div dir="rtl" >
@@ -49,18 +42,13 @@
  </div>
  
 ```
-raygansms.GetCredit()  {  (result) **in**
+raygansms.GetCredit()  {  (result) in
+	var text: String = "Code:\t\(String(describing: result?.Code))\nMessage:\t\(String(describing: result?.Message))"
+	if(result?.Result != nil){
+		text += "\nResult:\t\(String(describing: result?.Result))"
+	}            }
 
-**        var** text: String = &quot;Code:\t\(String(describing: result?.Code))\nMessage:\t\(String(describing: result?.Message))&quot;
-
-        if(result?.Result != **nil** ){
-
-                text += &quot;\nResult:\t\(String(describing: result?.Result))&quot;
-
-        }            }
-
-                print(&quot;text:\(text)&quot;)
-
+                print("text:\(text)")
  };
 ```
 
@@ -88,10 +76,8 @@ raygansms.GetCredit()  {  (result) **in**
  </div>
  
 ```
-raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles, userGroupID: UserGroupID, SendDateInTimeStamp: CLongLong(Date().timeIntervalSince1970)) { (result) **in**
-
+raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles, userGroupID: UserGroupID, SendDateInTimeStamp: CLongLong(Date().timeIntervalSince1970)) { (result) in
 // Your Code
-
 }
 ```
 
@@ -116,10 +102,8 @@ raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles
  </div>
  
 ```
-raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: recipientsMessages, userGroupID: UserGroupID) { (result) **in**
-
+raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: recipientsMessages, userGroupID: UserGroupID) { (result) in
 // Your Code
-
 }
 ```
 
@@ -142,15 +126,15 @@ raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: 
  </div>
  
 ```
-raygansms.SendMessageToPort(phoneNumber: PhoneNumber, recievePortNumber: PORT, sendPortNumber: PORT, userGroupID: UserGroupID, recipientsMessage: recipientsMessages) { (result) **in**
-
+raygansms.SendMessageToPort(phoneNumber: PhoneNumber, recievePortNumber: PORT, sendPortNumber: PORT, userGroupID: UserGroupID, recipientsMessage: recipientsMessages) { (result) in
 // Your Code
-
 }
+
 ```
 
 <div dir="rtl" >
-مشاهده وضعیت ارسال پیام گروهی ( **متد**  **GroupMessageStatus** )
+
+## مشاهده وضعیت ارسال پیام گروهی (متد GroupMessageStatus)
 
 از این متد برای واکشی، وضعیت لیست پیام های ارسالی استفاده می شود.
 
