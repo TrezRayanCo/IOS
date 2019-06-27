@@ -7,11 +7,11 @@
 
 برای استفاده از کتابخانه ابتدا یک نمونه از کلاس Raygansms ایجاد می کنید. دقت کنید اطلاعات ورودی مورد نیاز برای سازنده این نمونه نام کاربری و رمز سامانه پیامکی خودتان است. در ادامه هر یک از متدهای آنرا در زبان سویفت شرح می دهیم.
 
-**احراز هویت (متد**  **getAuthHeader**** )**
+## احراز هویت (متد getAuthHeader)
 
 این متد رشته مورد نیاز برای احراز هویت  (فیلد Authorization) را ایجاد می کند. این متد مقدار رشته ای بر می گرداند.
 
-**مقدار برگشتی متدها (شی** **Result)**
+## مقدار برگشتی متدها (شی Result)
 
 متدهای دیگر کتابخانه (به غیر از getAuthHeader ) از این نوع بر می گردانند. این نوع شامل سه متغییر است. یکی Code از نوع ResultCode و بیانگر موفقیت آمیز بودن عملیات یا شماره خطا است. نوع Message متن نتیجه را مشخص می کند. نوع Result نتیجه مربوط به متد را مشخص می‌کند و می‌تواند عدد، رشته و از نوع JSON باشد.
 </div>
@@ -55,9 +55,9 @@ raygansms.GetCredit()  {  (result) in
 <div dir="rtl" >
 در ادامه متدهای کتابخانه را شرح می دهیم.
 
-ارسال پیام
+## ارسال پیامارسال پیام
 
-ارسال پیام گروهی ( **متد**  **SendMessage** )
+## ارسال پیام گروهی (متد SendMessage)
 
 از این متد برای ارسال پیام گروهی استفاده می شود. بدیهی است از این پیام برای ارسال پیام تکی نیز میتوان استفاده نمود.
 </div>
@@ -82,11 +82,12 @@ raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles
 ```
 
 <div dir="rtl" >
+
 **ملاحضات:**
 
 در صورتی که تاریخ ارسال، از تاریخ فعلی کمتر باشد یا به عبارتی دیگر از زمان مورد نظر عبور کرده باشید، پیام مورد نظر در لحظه ارسال خواهد شد.
 
-ارسال پیام متناظر ( **متد**  **SendCorrespondingMessage** )
+## ارسال پیام متناظر (متد SendCorrespondingMessage)
 
 از این متد برای ارسال پیام متناظر استفاده می شود.
 </div>
@@ -108,7 +109,8 @@ raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: 
 ```
 
 <div dir="rtl" >
-ارسال پیام به پورت خاص ( **متد**  **SendMessageToPort** )
+
+## ارسال پیام به پورت خاص (متد SendMessageToPort)
 
 از این متد برای ارسال پیام به پورت خاص استفاده می شود.
 
@@ -148,15 +150,13 @@ raygansms.SendMessageToPort(phoneNumber: PhoneNumber, recievePortNumber: PORT, s
 </div>
  
 ```
-raygansms.GroupMessageStatus(userGroupID: UserGroupID) { (result) **in**
-
+raygansms.CorrespondingMessageStatus( messageId: MessageIDs) { (result) in
 // Your Code
-
-}
 ```
 
 <div dir="rtl" >
-مشاهده وضعیت ارسال پیام متناظر ( **متد**  **CorrespondingMessageStatus** )
+
+## مشاهده وضعیت ارسال پیام گروهی (متد GroupMessageStatus)
 
 از این متد برای واکشی ، وضعیت لیست پیام های ارسالی استفاده می شود.
 </div>
@@ -170,14 +170,14 @@ raygansms.GroupMessageStatus(userGroupID: UserGroupID) { (result) **in**
 </div>
 
 ```
-raygansms.CorrespondingMessageStatus( messageId:MessageIDs) { (result) **in**
-
+raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) in
 // Your Code
-
 }
 ```
+
 <div dir="rtl" >
-دریافت شناسه گروه پیام ( **متد**  **GetGroupMessageId** )
+
+## دریافت شناسه گروه پیام (متد GetGroupMessageId)
 
 از این متد برای دریافت ، شناسه گروه پیام ارسالی استفاده می شود.
 </div>
@@ -189,7 +189,7 @@ raygansms.CorrespondingMessageStatus( messageId:MessageIDs) { (result) **in**
 <div dir="rtl" >
 نمونه کد فراخوانی:
  </div>
- 
+
 ```
 raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) **in**
 
@@ -199,7 +199,8 @@ raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) **in**
 ```
 
 <div dir="rtl" >
-پیام های دریافتی ( **متد**  **ReceiveMessages** )
+
+## پیام های دریافتی (متد ReceiveMessages)
 
 از این متد برای واکشی ، لیست پیام های در یافتی استفاده می شود.
 </div>
@@ -216,15 +217,15 @@ raygansms.GetGroupMessageId(groupId: UserGroupID) { (result) **in**
  </div>
  
 ```
-raygansms.ReceiveMessages(phoneNumber: PhoneNumber, startDate: CLongLong(Date().timeIntervalSince1970), EndDate: CLongLong(Date().timeIntervalSince1970), page: 1) { (result) **in**
-
+raygansms.ReceiveMessages(phoneNumber: PhoneNumber, startDate: CLongLong(Date().timeIntervalSince1970), EndDate: CLongLong(Date().timeIntervalSince1970), page: 1) { (result) in
 // Your Code
-
 }
+
 ```
 
 <div dir="rtl" >
-دریافت اعتبار ( **متد**  **GetCredit** )
+
+## دریافت اعتبار (متد GetCredit)
 
 از این متد برای واکشی ، اعتبار کاربر استفاده می شود.
 
@@ -239,7 +240,8 @@ raygansms.GetCredit() { (result) **in**
 }
 ```
 <div dir="rtl" >
-قیمت پیامک ( **متد**  **GetPrices** )
+
+## قیمت پیامک (متد GetPrices)
 
 از این متد برای واکشی تعرفه ارسال پیامک توسط کاربر استفاده می شود.
 
@@ -247,15 +249,15 @@ raygansms.GetCredit() { (result) **in**
 </div>
 
 ```
-raygansms.GetPrices() { (result) **in**
-
+raygansms.GetPrices() { (result) in
 // Your Code
-
 }
+
 ```
 
 <div dir="rtl" >
-بررسی شماره ها در لیست سیاه ( **متد**  **ShowWhiteList** )
+
+## بررسی شماره ها در لیست سیاه (متد ShowWhiteList)
 
 خروجی متد زیر لیست شماره موبایل هایی است که در لیست سیاه قرار ندارند.
 </div>
@@ -269,10 +271,8 @@ raygansms.GetPrices() { (result) **in**
  </div>
  
 ```
-raygansms.ShowWhiteList(Mobiles: Mobiles) { (result) **in**
-
+raygansms.ShowWhiteList(Mobiles: Mobiles) { (result) in
 // Your Code
-
 }
 ```
 <div dir="rtl" >
@@ -315,6 +315,7 @@ raygansms.ShowWhiteList(Mobiles: Mobiles) { (result) **in**
 | footer | String |  متنی که تمایل دارید در انتهای پیامک فعال سازی شما ارسال شود، مانند SMSPanel.Trez.ir درصورت تمایل می توانید این مقدار را خالی ارسال نمایید |
 
 <div dir="rtl" >
+
 نمونه پیامک ارسالی این متد:
 
 با سلام ،
@@ -323,7 +324,7 @@ SMSPanel.Trez.ir
 
 مقدار بازگشتی این متد یک عدد بزرگتر 2000 می باشد که با این عدد می توانید با وب سرویس قدیمی اقدام به دریافت وضعیت پیامک ارسالی نمایید. در ضمن این کد هیچ ارتباطی به کد فعال سازی ندارد و با آن فرق دارد.
 
-متد بررسی صحت کد فعال سازی (متد CheckSendCode)
+## متد بررسی صحت کد فعال سازی (متد CheckSendCode)
 
 </div>
 
@@ -333,7 +334,9 @@ SMSPanel.Trez.ir
 | code | String | کد که برای کاربر ارسال شده و او این کد را در نرم افزار و یا سایت شما وارد کرده است |
 
 <div dir="rtl" >
- ارسال کد فعال سازی دلخواه بابت احراز هویت (متد SendMessageWithCode)
+
+##  ارسال کد فعال سازی دلخواه بابت احراز هویت (متد SendMessageWithCode)
+
 </div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
