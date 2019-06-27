@@ -102,7 +102,7 @@ raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles
 نمونه کد فراخوانی:
  </div>
  
-```xml
+```javascript
 raygansms.SendCorrespondingMessage(phoneNumber: PhoneNumber, recipientsMessage: recipientsMessages, userGroupID: UserGroupID) { (result) in
 // Your Code
 }
