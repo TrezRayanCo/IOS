@@ -75,7 +75,7 @@ raygansms.GetCredit()  {  (result) in
 نمونه کد فراخوانی:
  </div>
  
-```java
+```xml
 raygansms.SendMessage(phoneNumber: PhoneNumber, message: Hello, mobiles: Mobiles, userGroupID: UserGroupID, SendDateInTimeStamp: CLongLong(Date().timeIntervalSince1970)) { (result) in
 // Your Code
 }
